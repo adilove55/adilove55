@@ -1,0 +1,23 @@
+import random
+import math
+
+def draw_circle(x, y, radius):
+  for i in range(0, 360):
+    angle = math.radians(i)
+    x1 = x + radius * math.cos(angle)
+    y1 = y + radius * math.sin(angle)
+    print(x1, y1)
+
+def draw_raven_head(x, y):
+  print(x, y)
+  draw_circle(x, y, 10)
+  draw_circle(x + 5, y - 5, 5)
+  draw_circle(x - 5, y - 5, 5)
+
+def main():
+  x = random.randint(0, 100)
+  y = random.randint(0, 100)
+  draw_raven_head(x, y)
+
+if __name__ == "__main__":
+  main()
